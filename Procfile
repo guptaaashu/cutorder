@@ -1,1 +1,1 @@
-web: gunicorn hay.wsgi --log-file -
+web: gunicorn cut.wsgi --log-file -

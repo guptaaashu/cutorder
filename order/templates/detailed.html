@@ -18,12 +18,12 @@
  <tr>
  	{% with l=order.RedXS|add:order.RedM|add:order.RedL|add:order.RedXL|add:order.RedXXL|add:order.RedS %}
     <td>Red</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedXS|div:l }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedS|div:l }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedM|div:l }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedL|div:l }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedXL|div:l }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedXXL|div:l }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedXS|div:l|abs }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedS|div:l|abs }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedM|div:l|abs }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedL|div:l|abs }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedXL|div:l|abs }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedXXL|div:l|abs }}</td>
     <td>{{order.Red0rderquantity}}</td>
     {%endwith%}
  </tr>

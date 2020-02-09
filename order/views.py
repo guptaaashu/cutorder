@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Order
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from django.utils import timezone
 from .forms import OrderForm
 from django.http import HttpResponse
@@ -19,7 +19,7 @@ def orde(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse('Order Succesfully Placed')
+            return redirect('list')
     else:
         form = OrderForm()
     return render(request, 'order.html', {'form': form})

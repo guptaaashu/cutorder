@@ -18,36 +18,36 @@
  <tr>
  	{% with l=order.RedXS|add:order.RedM|add:order.RedL|add:order.RedXL|add:order.RedXXL|add:order.RedS %}
     <td>Red</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedXS|div:l|abs }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedS|div:l|abs }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedM|div:l|abs }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedL|div:l|abs }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedXL|div:l|abs }}</td>
-    <td>{{ order.Red0rderquantity|mul:order.RedXXL|div:l|abs }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedXS|intdiv:l }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedS|intdiv:l }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedM|intdiv:l }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedL|intdiv:l }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedXL|intdiv:l }}</td>
+    <td>{{ order.Red0rderquantity|mul:order.RedXXL|intdiv:l }}</td>
     <td>{{order.Red0rderquantity}}</td>
     {%endwith%}
  </tr>
  <tr>
  	{% with l=order.YellowXS|add:order.YellowM|add:order.YellowL|add:order.YellowXL|add:order.YellowXXL|add:order.YellowS %}
     <td>Yellow</td>
-    <td>{{ order.Yellow0rderquantity|mul:order.YellowXS|div:l }}</td>
-    <td>{{ order.Yellow0rderquantity|mul:order.YellowS|div:l }}</td>
-    <td>{{ order.Yellow0rderquantity|mul:order.YellowM|div:l }}</td>
-    <td>{{ order.Yellow0rderquantity|mul:order.YellowL|div:l }}</td>
-    <td>{{ order.Yellow0rderquantity|mul:order.YellowXL|div:l }}</td>
-    <td>{{ order.Yellow0rderquantity|mul:order.YellowXXL|div:l }}</td>
+    <td>{{ order.Yellow0rderquantity|mul:order.YellowXS|intdiv:l|abs }}</td>
+    <td>{{ order.Yellow0rderquantity|mul:order.YellowS|intdiv:l|abs }}</td>
+    <td>{{ order.Yellow0rderquantity|mul:order.YellowM|intdiv:l|abs }}</td>
+    <td>{{ order.Yellow0rderquantity|mul:order.YellowL|intdiv:l|abs }}</td>
+    <td>{{ order.Yellow0rderquantity|mul:order.YellowXL|intdiv:l|abs }}</td>
+    <td>{{ order.Yellow0rderquantity|mul:order.YellowXXL|intdiv:l|abs }}</td>
     <td>{{order.Yellow0rderquantity}}</td>
     {%endwith%}
  </tr>
   <tr>
  	{% with l=order.BlueXS|add:order.BlueM|add:order.BlueL|add:order.BlueXL|add:order.BlueXXL|add:order.BlueS %}
     <td>Blue</td>
-    <td>{{ order.Blue0rderquantity|mul:order.BlueXS|div:l }}</td>
-    <td>{{ order.Blue0rderquantity|mul:order.BlueS|div:l }}</td>
-    <td>{{ order.Blue0rderquantity|mul:order.BlueM|div:l }}</td>
-    <td>{{ order.Blue0rderquantity|mul:order.BlueL|div:l }}</td>
-    <td>{{ order.Blue0rderquantity|mul:order.BlueXL|div:l }}</td>
-    <td>{{ order.Blue0rderquantity|mul:order.BlueXXL|div:l }}</td>
+    <td>{{ order.Blue0rderquantity|mul:order.BlueXS|intdiv:l|abs }}</td>
+    <td>{{ order.Blue0rderquantity|mul:order.BlueS|intdiv:l|abs }}</td>
+    <td>{{ order.Blue0rderquantity|mul:order.BlueM|intdiv:l|abs }}</td>
+    <td>{{ order.Blue0rderquantity|mul:order.BlueL|intdiv:l|abs }}</td>
+    <td>{{ order.Blue0rderquantity|mul:order.BlueXL|intdiv:l|abs }}</td>
+    <td>{{ order.Blue0rderquantity|mul:order.BlueXXL|intdiv:l|abs }}</td>
     <td>{{order.Blue0rderquantity}}</td>
     {%endwith%}
  </tr>

@@ -18,7 +18,7 @@ from django.urls import path
 from order.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('orders',detail),
+    path('orders',detail,name='list'),
     path('order_detail/<int:pk>/',detail_view, name='detail'),
-    path('place/',orde),
+    path('',orde),
 ]

@@ -1,0 +1,8 @@
+<h1>Kalka Public School</h1>
+{% for order in Orders %}
+<div>
+<p><a href="{% url 'detail' pk=order.pk %}">No- {{ order.pk }}</a></p>
+<p></p>
+<p></p>
+</div>
+{% endfor %}

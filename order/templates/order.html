@@ -1,0 +1,10 @@
+
+<h1>Place Order</h1>
+{% csrf_token %}
+<form action="." method="post">
+<div class="form-group">
+{{ form.as_p }}
+{% csrf_token %}
+</div>
+<p><input type="submit" value="Place"></p>
+</form>

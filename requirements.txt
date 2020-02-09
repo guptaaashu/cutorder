@@ -49,4 +49,3 @@ termcolor==1.1.0
 Theano==1.0.2
 urllib3==1.25.7
 Werkzeug==0.14.1
-whitenoise==4.0

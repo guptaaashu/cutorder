@@ -3,8 +3,10 @@
 {% csrf_token %}
 <form action="." method="post">
 <div class="form-group">
+	<p>Order_no-{{ form.order_no }}</p>
 <p>Category-{{ form.Category }}</p>
 <p>Style-{{ form.Style }}</p>
+<p>Fit-{{ form.Fit }}</p>
 <p>Rejection Rate-{{ form.Rejection_rate }}</p>
 <p>Acception Rate-{{ form.Acception_rate }}</p>
 <p>Stock-{{ form.Stock }}</p>

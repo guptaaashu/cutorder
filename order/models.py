@@ -1,16 +1,24 @@
 from django.db import models
 Cat = (
-    ('sh', 'Shirt'),
-    ('tr', 'Trousers'),
+    ('shirt', 'Shirt'),
+    ('trousers', 'Trousers'),
+    ('jacket','Jacket')
 )
 Sat = (
-    ('ca', 'Casual'),
-    ('gl', 'Looking'),
+    ('casual', 'Casual'),
+    ('formal', 'Formal'),
+)
+Fat = (
+    ('Slim', 'Slim'),
+    ('Regular', 'Regular'),
+    ('Super Slim','Super Slim'),
 )
 # Create your models here.
 class Order(models.Model):
+    order_no=models.IntegerField(null=True,blank=True)
     Category= models.CharField(max_length=55, choices=Cat)
     Style= models.CharField(max_length=55,choices=Sat)
+    Fit= models.CharField(max_length=55,choices=Fat,default='Slim')
     Rejection_rate=models.IntegerField(default=2)
     Acception_rate=models.IntegerField(default=2)
     Stock= models.IntegerField(default=10)

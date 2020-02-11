@@ -18,8 +18,8 @@ def orde(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('list')
+            new=form.save()
+            return redirect('detail',pk=new.pk)
     else:
         form = OrderForm()
     return render(request, 'order.html', {'form': form})

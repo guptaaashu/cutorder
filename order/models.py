@@ -15,7 +15,7 @@ Fat = (
 )
 # Create your models here.
 class Order(models.Model):
-    order_no=models.IntegerField(null=True,blank=True)
+    order_no=models.IntegerField(null=True,blank=True,unique=True)
     Category= models.CharField(max_length=55, choices=Cat)
     Style= models.CharField(max_length=55,choices=Sat)
     Fit= models.CharField(max_length=55,choices=Fat,default='Slim')

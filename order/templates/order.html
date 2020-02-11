@@ -3,7 +3,52 @@
 {% csrf_token %}
 <form action="." method="post">
 <div class="form-group">
-{{ form.as_p }}
+<p>Category-{{ form.Category }}</p>
+<p>Style-{{ form.Style }}</p>
+<p>Rejection Rate-{{ form.Rejection_rate }}</p>
+<p>Acception Rate-{{ form.Acception_rate }}</p>
+<p>Stock-{{ form.Stock }}</p>
+<table>
+	 <tr>
+    <th>COLOUR</th>
+    <th>ORDER QUANTITY</th>
+    <th>XS</th>
+    <th>S</th>
+<th>M</th>
+<th>L</th>
+<th>XL</th>
+<th>XXL</th>>
+ </tr>
+ <tr>
+ <td>Red</td>
+<td>{{ form.Red0rderquantity }}</td>
+<td>{{ form.RedXS }}</td>
+<td>{{ form.RedS }}</td>
+<td>{{ form.RedM }}</td>
+<td>{{ form.RedL }}</td>
+<td>{{ form.RedXL}}</td>
+<td>{{ form.RedXXL }}</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>{{ form.Blue0rderquantity }}</td>
+<td>{{ form.BlueXS }}</td>
+<td>{{ form.BlueS }}</td>
+<td>{{ form.BlueM }}</td>
+<td>{{ form.BlueL }}</td>
+<td>{{ form.BlueXL }}</td>
+<td>{{ form.BlueXXL }}</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>{{ form.Yellow0rderquantity }}</td>
+<td>{{ form.YellowXS }}</td>
+<td>{{ form.YellowS }}</td>
+<td>{{ form.YellowM }}</td>
+<td>{{ form.YellowL }}</td>
+<td>{{ form.YellowXL }}</td>
+<td>{{ form.YellowXXL }}</td>
+</table>
 {% csrf_token %}
 </div>
 <p><input type="submit" value="Place"></p>

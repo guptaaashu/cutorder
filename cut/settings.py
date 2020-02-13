@@ -25,7 +25,7 @@ SECRET_KEY = '2q9+o8d_uize#n@2g3e)@etgi-6x+)#$(%(%d81k)x0#_u%46-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://cutorder.herokuapp.com']
 
 
 # Application definition

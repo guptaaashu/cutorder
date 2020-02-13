@@ -1,0 +1,47 @@
+<h1>JustGetIt</h1>
+<div>
+<h1>ORDER NO {{ lay.order_no }}</h1>
+<p><a href="{% url 'blue' pk=lay.pk %}">Blue Layout</a></p>
+<p><a href="{% url 'yellow' pk=lay.pk %}">Yellow Layout</a></p>
+<h1>LAYOUT SUMMARY</h1>
+{% with t=1 %}
+{% for a,b,c,d,e in data %}
+<div>
+<table>
+<tr>
+<p>Lay {{e}}</p>
+<p>Plies-{{a}}</p>
+<p>Markers- {% for t in d %}
+{{t}}
+{% endfor %}</p>
+<table>
+<tr>
+    <th>SIZES</th>
+    <th>38</th>
+    <th>40</th>
+<th>42</th>
+<th>44</th>
+<th>46</th>
+<th>48</th>
+<th>50</th>
+<th>52</th>
+<th>54</th>
+</tr>
+<tr>
+<td>QTY</td>
+{% for t in c %}
+<td>{{t}}</td>
+{% endfor %}
+</tr>
+<tr>
+<td>Balance</td>
+{% for t in b %}
+<td>{{t}}</td>
+{% endfor %}
+</tr>
+</table>
+</div>
+</tr>
+</table>
+{% endfor %}
+{% endwith %}

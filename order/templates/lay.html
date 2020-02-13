@@ -1,0 +1,61 @@
+<h1>Place Order</h1>
+{% csrf_token %}
+<form action="{% url 'lay' %}" method="post" enctype="multipart/form-data">
+<div class="form-group">
+	<p>Order_no-{{ form.order_no }}</p>
+<p>Category-{{ form.Category }}</p>
+<p>Style-{{ form.Style }}</p>
+<p>Fit-{{ form.Fit }}</p>
+<table>
+	 <tr>
+    <th>COLOUR</th>
+    <th>38</th>
+    <th>40</th>
+<th>42</th>
+<th>44</th>
+<th>46</th>
+<th>48</th>>
+<th>50</th>>
+<th>52</th>>
+<th>54</th>>
+ </tr>
+ <tr>
+ <td>Red</td>
+<td>{{ form.Red38 }}</td>
+<td>{{ form.Red40 }}</td>
+<td>{{ form.Red42 }}</td>
+<td>{{ form.Red44 }}</td>
+<td>{{ form.Red46}}</td>
+<td>{{ form.Red48 }}</td>
+<td>{{ form.Red50 }}</td>
+<td>{{ form.Red52 }}</td>
+<td>{{ form.Red54 }}</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>{{ form.Blue38 }}</td>
+<td>{{ form.Blue40 }}</td>
+<td>{{ form.Blue42 }}</td>
+<td>{{ form.Blue44 }}</td>
+<td>{{ form.Blue46 }}</td>
+<td>{{ form.Blue48 }}</td>
+<td>{{ form.Blue50 }}</td>
+<td>{{ form.Blue52 }}</td>
+<td>{{ form.Blue54 }}</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>{{ form.Yellow38 }}</td>
+<td>{{ form.Yellow40 }}</td>w
+<td>{{ form.Yellow42 }}</td>
+<td>{{ form.Yellow44 }}</td>
+<td>{{ form.Yellow46 }}</td>
+<td>{{ form.Yellow48 }}</td>
+<td>{{ form.Yellow50 }}</td>
+<td>{{ form.Yellow52 }}</td>
+<td>{{ form.Yellow54 }}</td>
+</table>
+{% csrf_token %}
+</div>
+<p><input type="submit" value="Placeit"></p>
+</form>

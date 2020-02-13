@@ -1,19 +1,24 @@
 from django.db import models
+
 Cat = (
     ('shirt', 'Shirt'),
     ('trousers', 'Trousers'),
-    ('jacket','Jacket')
+    ('jacket','Jacket'),
 )
+
 Sat = (
     ('casual', 'Casual'),
     ('formal', 'Formal'),
 )
+
 Fat = (
     ('Slim', 'Slim'),
     ('Regular', 'Regular'),
     ('Super Slim','Super Slim'),
 )
-# Create your models here.
+
+
+
 class Order(models.Model):
     order_no=models.IntegerField(null=True,blank=True,unique=True)
     Category= models.CharField(max_length=55, choices=Cat)
@@ -43,6 +48,51 @@ class Order(models.Model):
     YellowL=models.IntegerField(default=0,null=True,blank=True)
     YellowXL=models.IntegerField(default=0,null=True,blank=True)
     YellowXXL=models.IntegerField(default=0,null=True,blank=True)
+
+
+class lay(models.Model):
+    order_no=models.IntegerField(null=True,blank=True,unique=True)
+    Category= models.CharField(max_length=55, choices=Cat)
+    Style= models.CharField(max_length=55,choices=Sat)
+    Fit= models.CharField(max_length=55,choices=Fat,default='Slim')
+    Red38=models.IntegerField(default=0,null=True,blank=True)
+    Red40=models.IntegerField(default=0,null=True,blank=True)
+    Red42=models.IntegerField(default=0,null=True,blank=True)
+    Red44=models.IntegerField(default=0,null=True,blank=True)
+    Red46=models.IntegerField(default=0,null=True,blank=True)
+    Red48=models.IntegerField(default=0,null=True,blank=True)
+    Red50=models.IntegerField(default=0,null=True,blank=True)
+    Red52=models.IntegerField(default=0,null=True,blank=True)
+    Red54=models.IntegerField(default=0,null=True,blank=True)
+    Blue38=models.IntegerField(default=0,null=True,blank=True)
+    Blue40=models.IntegerField(default=0,null=True,blank=True)
+    Blue42=models.IntegerField(default=0,null=True,blank=True)
+    Blue44=models.IntegerField(default=0,null=True,blank=True)
+    Blue46=models.IntegerField(default=0,null=True,blank=True)
+    Blue48=models.IntegerField(default=0,null=True,blank=True)
+    Blue50=models.IntegerField(default=0,null=True,blank=True)
+    Blue52=models.IntegerField(default=0,null=True,blank=True)
+    Blue54=models.IntegerField(default=0,null=True,blank=True)
+    Yellow38=models.IntegerField(default=0,null=True,blank=True)
+    Yellow40=models.IntegerField(default=0,null=True,blank=True)
+    Yellow42=models.IntegerField(default=0,null=True,blank=True)
+    Yellow44=models.IntegerField(default=0,null=True,blank=True)
+    Yellow46=models.IntegerField(default=0,null=True,blank=True)
+    Yellow48=models.IntegerField(default=0,null=True,blank=True)
+    Yellow50=models.IntegerField(default=0,null=True,blank=True)
+    Yellow52=models.IntegerField(default=0,null=True,blank=True)
+    Yellow54=models.IntegerField(default=0,null=True,blank=True)
+    
+    
+
+
+
+
+
+
+
+
+
 
 
     

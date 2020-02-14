@@ -213,7 +213,7 @@ def lay_detail_view_yellow(request,pk):
         print(t)
         print(y)
         print(g)
-    red=[[38,oay.Red38],[40,oay.Red40],[42,oay.Red42],[44,oay.Red44],[46,oay.Red46],[48,oay.Red48],[50,oay.Red50],[52,oay.Red52],[54,oay.Red54]]
+    red=[[38,oay.Yellow38],[40,oay.Yellow40],[42,oay.Yellow42],[44,oay.Yellow44],[46,oay.Yellow46],[48,oay.Yellow48],[50,oay.Yellow50],[52,oay.Yellow52],[54,oay.Yellow54]]
     l=[]
     t=[]
     y=[]

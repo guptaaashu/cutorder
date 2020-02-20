@@ -26,4 +26,7 @@ urlpatterns = [
     path('lay_detail/<int:pk>/red',lay_detail_view_red, name='red'),
     path('lay_detail/<int:pk>/blue',lay_detail_view_blue, name='blue'),
     path('lay_detail/<int:pk>/yellow',lay_detail_view_yellow, name='yellow'),
+    path('lay_detail/<int:pk>/red1',lay_detail_view_red1, name='red1'),
+    path('lay_detail/<int:pk>/blue1',lay_detail_view_blue1, name='blue1'),
+    path('lay_detail/<int:pk>/yellow1',lay_detail_view_yellow1, name='yellow1'),
 ]

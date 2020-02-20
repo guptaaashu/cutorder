@@ -1,8 +1,15 @@
 <h1>JustGetIt</h1>
 <div>
 <h1>ORDER NO {{ lay.order_no }}</h1>
+<h1>Method {{method}} Colour- {{color}}</h1>
+<p>For Method 1</p>
+<p><a href="{% url 'red' pk=lay.pk %}">Red Layout</a></p>
 <p><a href="{% url 'blue' pk=lay.pk %}">Blue Layout</a></p>
 <p><a href="{% url 'yellow' pk=lay.pk %}">Yellow Layout</a></p>
+<p>For Method 2</p>
+<p><a href="{% url 'red1' pk=lay.pk %}">Red Layout</a></p>
+<p><a href="{% url 'blue1' pk=lay.pk %}">Blue Layout</a></p>
+<p><a href="{% url 'yellow1' pk=lay.pk %}">Yellow Layout</a></p>
 <h1>LAYOUT SUMMARY</h1>
 {% with t=1 %}
 {% for a,b,c,d,e in data %}

@@ -1,0 +1,45 @@
+{% load mathfilters %}
+<h1>JustGetIt</h1>
+<div>
+<h1>ORDER NO {{ Roll.order_no }}</h1>
+<p>Style {{Roll.Style}}</p>
+<table>
+<tr>
+<th>Roll No.</th>
+<th>Roll Length</th>
+<th>Unit Length</th>
+<th>Fabric Consumed</th>
+</tr>
+{% with l=1.5|mul:Roll.no_of_plies %}
+<tr>
+<td>1</td>
+<td>{{ Roll.Roll_1}}</td>
+<td>{{ l }}</td>
+<td>{{ l|sub:Roll.Roll_1 }}</td>
+</tr>
+<tr>
+<td>2</td>
+<td>{{ Roll.Roll_2 }}</td>
+<td>{{ l }}</td>
+<td>{{ l|sub:Roll.Roll_2 }}</td>
+</tr>
+<tr>
+<td>3</td>
+<td>{{ Roll.Roll_3 }}</td>
+<td>{{ l }}</td>
+<td>{{ l|sub:Roll.Roll_3 }}</td>
+</tr>
+<tr>
+<td>4</td>
+<td>{{ Roll.Roll_4 }}</td>
+<td>{{ l }}</td>
+<td>{{ l|sub:Roll.Roll_4 }}</td>
+</tr>
+<tr>
+<td>5</td>
+<td>{{ Roll.Roll_5 }}</td>
+<td>{{ l }}</td>
+<td>{{ l|sub:Roll.Roll_5 }}</td>
+</tr>
+{%endwith%}
+</table>

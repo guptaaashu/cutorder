@@ -83,9 +83,17 @@ class lay(models.Model):
     Yellow52=models.IntegerField(default=0,null=True,blank=True)
     Yellow54=models.IntegerField(default=0,null=True,blank=True)
     
-    
 
 
+class Roll(models.Model):
+    order_no=models.IntegerField(null=True,blank=True,unique=True)
+    Style= models.CharField(max_length=55,choices=Sat)
+    Roll_1=models.IntegerField(default=0,null=True,blank=True)
+    Roll_2=models.IntegerField(default=0,null=True,blank=True)
+    Roll_3= models.IntegerField(default=0,null=True,blank=True)
+    Roll_4=models.IntegerField(default=0,null=True,blank=True)
+    Roll_5=models.IntegerField(default=0,null=True,blank=True)
+    no_of_plies=models.IntegerField(default=0,null=True,blank=True)
 
 
 

@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Order,lay
+from .models import Order,lay, Roll
 from django.shortcuts import render, get_object_or_404,redirect
 from django.utils import timezone
-from .forms import OrderForm, LayForm
+from .forms import OrderForm, LayForm, RollForm
 from django.http import HttpResponse
 # Create your views here.
 def detail(request):
@@ -728,3 +728,23 @@ def lay_detail_view_yellow2(request,pk):
     method=2
     color='red'
     return render(request, 'lay_detail.html', {'data': u,'lay': oay,'method':method,'color':color})
+
+
+def roll_detail(request):
+    Rolls= Roll.objects.all()
+    return render(request, 'roll_detail_view.html', {'Rolls': Rolls})
+
+def roll_detail_view(request,pk):
+    roll=get_object_or_404(Roll, pk=pk)
+    return render(request, 'roll_detailed.html', {'Roll': roll})
+
+
+def roll(request):
+    if request.method == 'POST':
+        form = RollForm(request.POST)
+        if form.is_valid():
+            new=form.save()
+            return redirect('roll_detail',pk=new.pk)
+    else:
+        form = RollForm()
+    return render(request, 'roll.html', {'form': form})

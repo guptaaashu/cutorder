@@ -32,4 +32,7 @@ urlpatterns = [
     path('lay_detail/<int:pk>/red2',lay_detail_view_red2, name='red2'),
     path('lay_detail/<int:pk>/blue2',lay_detail_view_blue2, name='blue2'),
     path('lay_detail/<int:pk>/yellow2',lay_detail_view_yellow2, name='yellow2'),
+    path('roll',roll,name='roll'),
+    path('rolls',roll_detail,name='list2'),
+    path('roll_detail/<int:pk>/',roll_detail_view, name='roll_detail'),
 ]

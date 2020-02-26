@@ -1,0 +1,9 @@
+<h1>Roll_Check</h1>
+{% csrf_token %}
+<form action="{% url 'roll' %}" method="post">
+<div class="form-group">
+{{form.as_p}}
+{% csrf_token %}
+</div>
+<p><input type="submit" value="Check"></p>
+</form>

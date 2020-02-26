@@ -1,0 +1,8 @@
+<h1>Rolls List</h1>
+{% for roll in Rolls %}
+<div>
+<p><a href="{% url 'roll_detail' pk=roll.pk %}">Order No {{ roll.order_no }}</a></p>
+<p></p>
+<p></p>
+</div>
+{% endfor %}

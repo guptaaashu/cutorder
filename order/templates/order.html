@@ -1,7 +1,7 @@
 
 <h1>Place Order</h1>
 {% csrf_token %}
-<form action="." method="post">
+<form action="{% url 'order' %}" method="post">
 <div class="form-group">
 	<p>Order_no-{{ form.order_no }}</p>
 <p>Category-{{ form.Category }}</p>

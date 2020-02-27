@@ -3,6 +3,7 @@
 <div>
 <h1>ORDER NO {{ Roll.order_no }}</h1>
 <p>Style {{Roll.Style}}</p>
+<p>Lay Length {{Roll.lay_length}}</p>
 <table>
 <tr>
 <th>Roll No.</th>
@@ -10,7 +11,7 @@
 <th>Unit Length</th>
 <th>Fabric Consumed</th>
 </tr>
-{% with l=1.5|mul:Roll.no_of_plies %}
+{% with l=Roll.lay_length|mul:Roll.no_of_plies %}
 <tr>
 <td>1</td>
 <td>{{ Roll.Roll_1}}</td>

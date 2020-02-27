@@ -94,6 +94,7 @@ class Roll(models.Model):
     Roll_4=models.IntegerField(default=0,null=True,blank=True)
     Roll_5=models.IntegerField(default=0,null=True,blank=True)
     no_of_plies=models.IntegerField(default=0,null=True,blank=True)
+    lay_length=models.DecimalField(max_digits=15,decimal_places=2,default=1.5,null=True,blank=True)
 
 
 

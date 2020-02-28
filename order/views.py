@@ -734,7 +734,7 @@ def lay_detail_view_red3(request,pk):
     oay=get_object_or_404(lay, pk=pk)
     def check(bal):
         for i in bal:
-            if(i[1]>3):
+            if(i[1]>2):
                 return True
         return False
     def getlay(l,red,t,y,g):
@@ -792,8 +792,6 @@ def lay_detail_view_red3(request,pk):
                 leng=len(se)
                 ue=int(leng/2)
                 s=se[ue]
-                if(s<=3):
-                    break
                 l.append(s)
                 u=[]
                 for i in range(0,9):
@@ -846,7 +844,7 @@ def lay_detail_view_blue3(request,pk):
     oay=get_object_or_404(lay, pk=pk)
     def check(bal):
         for i in bal:
-            if(i[1]>3):
+            if(i[1]>2):
                 return True
         return False
     def getlay(l,red,t,y,g):
@@ -904,8 +902,6 @@ def lay_detail_view_blue3(request,pk):
                 leng=len(se)
                 ue=int(leng/2)
                 s=se[ue]
-                if(s<=3):
-                    break
                 l.append(s)
                 u=[]
                 for i in range(0,9):
@@ -957,7 +953,7 @@ def lay_detail_view_yellow3(request,pk):
     oay=get_object_or_404(lay, pk=pk)
     def check(bal):
         for i in bal:
-            if(i[1]>3):
+            if(i[1]>2):
                 return True
         return False
     def getlay(l,red,t,y,g):
@@ -1015,8 +1011,6 @@ def lay_detail_view_yellow3(request,pk):
                 leng=len(se)
                 ue=int(leng/2)
                 s=se[ue]
-                if(s<=3):
-                    break
                 l.append(s)
                 u=[]
                 for i in range(0,9):

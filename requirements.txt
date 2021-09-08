@@ -31,7 +31,7 @@ mysqlclient==1.4.4
 numpy==1.14.5
 pandas==0.23.3
 phonenumbers==8.10.23
-Pillow==6.2.1
+Pillow==8.3.2
 protobuf==3.6.0
 psycopg2-binary==2.8.4
 python-dateutil==2.7.3
